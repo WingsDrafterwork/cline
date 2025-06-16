@@ -63,6 +63,7 @@ export interface ApiHandlerOptions {
 	ollamaModelId?: string
 	ollamaBaseUrl?: string
 	ollamaApiOptionsCtxNum?: string
+	ollamaUseStreaming?: boolean
 	lmStudioModelId?: string
 	lmStudioBaseUrl?: string
 	geminiApiKey?: string

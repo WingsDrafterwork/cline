@@ -1912,6 +1912,18 @@ const ApiOptions = ({
 						placeholder={"e.g. 32768"}>
 						<span style={{ fontWeight: 500 }}>Model Context Window</span>
 					</VSCodeTextField>
+
+					<VSCodeCheckbox
+						checked={apiConfiguration?.ollamaUseStreaming ?? true}
+						onChange={(e: any) => {
+							const isChecked = e.target.checked === true
+							setApiConfiguration({
+								...apiConfiguration,
+								ollamaUseStreaming: isChecked,
+							})
+						}}>
+						Use streaming responses
+					</VSCodeCheckbox>
 					<p
 						style={{
 							fontSize: "12px",
